@@ -3,9 +3,11 @@ const OpenAI = require('openai')
 const {Configuration, OpenAIApi} = OpenAI;
 
 const openai = new OpenAI({
-    organization: process.env.OPENAI_ORG,
-    apiKey: process.env.OPENAI_API_KEY
+    organization:`org-jqYvjursxqWxgg7bb6cpN3fH`,
+    apiKey:`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`
 });
+const path = require('path');
+const buildPath = path.join(__dirname, './build');
 
 //An express server
 const express = require('express')
@@ -19,6 +21,16 @@ app.use(cors());
 
 
 app.post ('/', async (req,res) => {
+
+    //for REACT APP
+    res.sendFile(
+        path.join(__dirname, "./build/index.html"),
+        function(err) {
+                if(err) {
+                        res.status(500).send(err);
+                        }
+                }
+                );
     const {message} = req.body;
 
     const completion = await openai.completions.create({
@@ -35,10 +47,12 @@ app.post ('/', async (req,res) => {
     console.log(completion.choices[0])
         if (completion.choices[0].text){
             res.json({
-                message: completion.choices[0].text
+                message: completion.choices[0].text``
             })
         }
-    })
+    })//end app.post
+
+
 
 app.listen(port, () => {
     console.log(`Backend Server started on port ${port}`)

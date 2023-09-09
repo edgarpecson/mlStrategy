@@ -68,16 +68,7 @@ html {
   text-align: center;
   cursor: pointer;
 }
-/* .main .result {
-  height: auto;
-  max-block-size: auto;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  overflow-y: auto; /* Add scrollbars if the content exceeds the height */
- */
+
 
 .display-linebreak {
   white-space: pre-wrap;
