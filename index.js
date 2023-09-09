@@ -40,15 +40,6 @@ app.post ('/', async (req,res) => {
         }
     })
 
-// function generatePrompt(message){
-//     const userInput = message;
-//     return `You're a machine learning strategy expert for a medium sized business. Use this input to define a 4 part strategy to utilize machine learning and AI tools to improve the effectiveness of the business and optimize COGS.  Here is the information provide: ${userInput}`
-// }
-
-    
-
-
-
 app.listen(port, () => {
     console.log(`Backend Server started on port ${port}`)
 })
