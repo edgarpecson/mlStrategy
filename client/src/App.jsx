@@ -48,11 +48,11 @@ return (
   <div>
     <div>
       <title>ML Strategies</title>
-      <link rel="icon" href="/chatbot.png" />
+      <link rel="icon" href="./chatbot.png" />
     </div>
 
     <main className={styles.main}>
-      <img src="/chatbot.png" className={styles.icon} />
+      <img src="./chatbot.png" className={styles.icon} />
       <h3>What ways can ML help your business?</h3>
                           <form onSubmit={handleSubmit}>
                             <textarea
