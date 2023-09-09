@@ -3,8 +3,8 @@ const OpenAI = require('openai')
 const {Configuration, OpenAIApi} = OpenAI;
 
 const openai = new OpenAI({
-    organization:`org-jqYvjursxqWxgg7bb6cpN3fH`,
-    apiKey:`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`
+    organization: process.env.OPENAI_ORG,
+    apiKey: process.env.OPENAI_API_KEY
 });
 
 //An express server
